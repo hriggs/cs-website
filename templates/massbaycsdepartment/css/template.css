@@ -1,0 +1,292 @@
+/* MassBay CS Department css */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+ 
+body {
+  background-color: #fff;
+  margin: 0 0 100px; /* bottom = footer height */
+  /*padding: 25px;*/
+}
+
+.container-fluid {
+	padding-left: 0%;
+  	margin-right: 15px; 
+}
+
+.content {
+  width: 80%;
+  margin: 0px 8% 0px 8%; 
+  padding: 1em 2%;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid black; 
+  padding: 1em 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 25px;
+  width: 80%;
+  margin: 0 10%;
+  overflow: hidden;
+}
+
+p {
+  text-align: justify;
+}
+
+/* Navigation bar */
+
+.container-fluid {
+  padding-left: 10%;
+}
+
+/* Navbar Logo */
+.navbar-header {
+  float: left;
+  margin-right: 1em;
+}
+
+#nav {
+  margin: 0;
+  z-index: 100;
+}
+
+#nav.affix {
+    position: fixed;
+    top: 0;
+    width: 80%
+}
+
+#nav > .navbar-inner {
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+ 	background-color: #2e353e;
+  	background-image: none;
+}
+
+.navbar .nav > li > a {
+  color: #fff;
+  text-shadow: none;
+  /*font-size: 90%;*/
+}
+
+.navbar .nav > li > a:hover {
+  color: #e16a49;
+}
+
+.navbar .nav > .active > a {
+  background-image: none;
+  background-color: #e16a4a;
+  color: #fff;
+  height: 25px;
+}
+
+.navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+  background-image: none;
+  background-color: #e16a4a;
+  color: #2e353e;
+  height: 25px;
+}
+
+/* Navigation bar drop-down styles */
+nav .nav-child {
+	position: absolute;
+	top: 95%;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	min-width: 160px;
+	padding: 5px 0;
+	margin: 2px 0 0;
+	list-style: none;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,0.2);
+	*border-right-width: 2px;
+	*border-bottom-width: 2px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+nav .nav-child.pull-right {
+	right: 0;
+	left: auto;
+}
+nav .nav-child .divider {
+	*width: 100%;
+	height: 1px;
+	margin: 8px 1px;
+	*margin: -5px 0 5px;
+	overflow: hidden;
+	background-color: #e5e5e5;
+	border-bottom: 1px solid #fff;
+}
+nav .nav-child a {
+	display: block;
+	padding: 3px 20px;
+	clear: both;
+	font-size: 120%;
+	font-weight: normal;
+	line-height: 18px;
+	color: #fff;
+	white-space: nowrap;
+}
+nav .nav > li {
+	position: relative;
+}
+nav .nav > li:hover > .nav-child,
+nav .nav > li > a:focus + .nav-child {
+	display: block;
+  	background-color: #2e353e;
+}
+
+nav .nav-child:before {
+	position: absolute;
+	top: -7px;
+	left: 9px;
+	display: inline-block;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid #ccc;
+	border-left: 7px solid transparent;
+	border-bottom-color: rgba(0,0,0,0.2);
+	content: '';
+}
+nav .nav-child:after {
+	position: absolute;
+	top: -6px;
+	left: 10px;
+	display: inline-block;
+	border-right: 6px solid transparent;
+	border-bottom: 6px solid #ffffff;
+	border-left: 6px solid transparent;
+	content: '';
+}
+nav .nav-child li > a:hover,
+nav .nav-child li > a:focus,
+nav .nav-child:hover > a {
+	text-decoration: none;
+	color: #e16a4a;
+    background-color: #2e353e;
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: fixed;
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+  background-color: #2E353E;
+  border-radius: 0px;
+}
+
+.breadcrumb > li {
+  text-shadow: none;
+  color: #fff;
+}
+
+.breadcrumb > li > a {
+  color: #e06543;
+}
+
+/* Slideshow */
+.flexslider .slides img {
+    display: block;
+    height: 350px;
+    max-width: 100%;
+    width: 100%;
+    max-height: 350px;
+  	height: auto;
+}
+
+/* Side menu */
+.side-menu {
+  background-color: #2E353E;
+  margin: 0 15px 0 15px; 
+}
+
+.side-menu .nav > li > a {
+    color: #fff;
+  	padding: 0.5em 0;
+}
+
+.side-menu .nav > li > a:hover {
+    color: #DE6948;
+  	background-color: #2E353E;
+}
+
+.side-menu .nav > .active > a {
+  color: #DE6948;
+}
+
+ul.nav.menu > .divider {
+  padding: 1.5em 0 0 0;
+}
+
+.separator {
+  color: #fff;
+  font-size: 170%; 
+}
+
+.content-right {
+  /*background-color: red; */
+}
+
+/* Home page */
+.page-header h1 {
+  display: none;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* Faculty and Staff */ 
+
+td {
+  padding: 0.25em 0.25em 0.25em 1em;
+}
+
+table ul {
+  list-style-type: none;
+}
+
+table ul {
+    margin: 0;
+    padding: 0;
+}
+
+table ul li {
+  margin:0.7em 0 0.7em 0; 
+}
+
+.fac-section {
+  margin: 3em 0 0 0;
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 780px) {
+
+}

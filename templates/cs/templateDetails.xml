@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.4" type="template" client="site">
+	<name>MassBayCSDepartment</name>
+	<creationDate>2015-10-07</creationDate>
+	<author>Hannah Riggs</author>
+	<authorEmail>hkriggs128@gmail.com</authorEmail>
+	<authorUrl>N/A</authorUrl>
+	<copyright>Hannah Riggs 2015</copyright>
+	<license>GNU/GPL</license>
+	<version>1.0.0</version>
+	<description>Template for MassBay CS Department website.</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>images</folder>
+		<folder>css</folder>
+	</files>
+	<positions>
+		<position>breadcrumbs</position>
+		<position>nav</position>
+		<position>top</position>
+		<position>bottom</position>
+		<position>left</position>
+		<position>right</position>
+		<position>footer</position>
+	</positions>
+</extension>
