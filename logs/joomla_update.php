@@ -74,3 +74,11 @@
 2015-11-16T16:06:19+00:00	INFO 127.0.0.1	update	Update started by user Super User (980). Old version is 3.4.4.
 2015-11-16T16:06:19+00:00	INFO 127.0.0.1	update	File Joomla_3.4.4_to_3.4.5-Stable-Patch_Package.zip successfully downloaded.
 2015-11-16T16:06:19+00:00	INFO 127.0.0.1	update	Starting installation of new version.
+2015-12-15T20:29:22+00:00	INFO 127.0.0.1	update	Update started by user Super User (980). Old version is 3.4.5.
+2015-12-15T20:29:22+00:00	INFO 127.0.0.1	update	Downloading update file from https://github.com/joomla/joomla-cms/releases/download/3.4.6/Joomla_3.4.5_to_3.4.6-Stable-Patch_Package.zip.
+2015-12-15T20:29:23+00:00	INFO 127.0.0.1	update	File Joomla_3.4.5_to_3.4.6-Stable-Patch_Package.zip successfully downloaded.
+2015-12-15T20:29:23+00:00	INFO 127.0.0.1	update	Starting installation of new version.
+2015-12-15T20:29:24+00:00	INFO 127.0.0.1	update	Finalising installation.
+2015-12-15T20:29:24+00:00	INFO 127.0.0.1	update	Deleting removed files and folders.
+2015-12-15T20:29:25+00:00	INFO 127.0.0.1	update	Cleaning up after installation.
+2015-12-15T20:29:25+00:00	INFO 127.0.0.1	update	Update to version 3.4.6 is complete.

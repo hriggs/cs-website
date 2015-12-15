@@ -257,6 +257,30 @@ ul.nav.menu > .divider {
   display: none;
 }
 
+.home h1, .home h2 {
+  text-align: center;
+}
+
+.home-info {
+  margin: 1em 0 2em 0;
+}
+
+.side-third {
+  float: left;
+  background-color: #2E353E;
+  color: #FFF;
+  width: 30%;
+  padding: 1%;
+}
+
+.middle-third {
+  float: left;
+  background-color: #E16A4A;
+  width: 30%;
+  margin: 0 2%;
+  padding: 1%;
+}
+
 .clearfix {
   clear: both;
 }
