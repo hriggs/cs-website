@@ -46,10 +46,10 @@ JHtmlBootstrap::loadCss($includeMaincss = true);
 <jdoc:include type="modules" name="top" />  
     
 <jdoc:include type="component" />
-<jdoc:include type="modules" name="bottom" />
-<footer>
-    &copy; 2015 MassBay Community College
-    </footer>
+
+	<footer>
+    	&copy; 2015 MassBay Community College
+	</footer>
   </div> <!-- end content -->
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/scripts.js"></script>
