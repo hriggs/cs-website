@@ -44,6 +44,11 @@ p {
   text-align: justify;
 }
 
+ol {
+  
+  text-align: justify;
+}
+
 /* Navigation bar */
 
 .container-fluid {
