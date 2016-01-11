@@ -46,6 +46,8 @@ JHtmlBootstrap::loadCss($includeMaincss = true);
 <jdoc:include type="modules" name="top" />  
     
 <jdoc:include type="component" />
+    
+<jdoc:include type="modules" name="bottom" />  
 
 	<footer>
     	&copy; 2015 MassBay Community College

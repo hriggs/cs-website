@@ -1010,7 +1010,7 @@ akeeba.Configuration.FtpTest.testConnection = function(buttonKey, configKey)
                 $('#testFtpDialogBodyFail').css('display', 'block');
             }
 
-            if (typeOf(SqueezeBox) == "object")
+            if ($('#testFtpDialog > div > div').length == 0)
             {
                 // Joomla! 2.5
                 $('#testFtpDialog').clone()
@@ -1077,7 +1077,24 @@ akeeba.Configuration.SftpTest.testConnection = function(buttonKey, configKey)
                 $('#testFtpDialogBodyFail').css('display', 'block');
             }
 
-            $('#testFtpDialog').modal('show');
+            if ($('#testFtpDialog > div > div').length == 0)
+            {
+                // Joomla! 2.5
+                $('#testFtpDialog').clone()
+                    .attr('id', 'testFtpDialogClone')
+                    .css('display', 'block')
+                    .appendTo($('body'));
+
+                SqueezeBox.open(document.getElementById('testFtpDialogClone'), {
+                    handler: 'adopt',
+                    size: {x: 400, y: 300}
+                });
+            }
+            else
+            {
+                // Joomla! 3.x
+                $('#testFtpDialog').modal('show');
+            }
         }, null, false, 15000
     )
 };

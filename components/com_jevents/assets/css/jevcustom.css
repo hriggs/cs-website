@@ -1,0 +1,45 @@
+/* 
+    Document   : jevcustom
+    Created on : 22-Apr-2013, 14:12:51
+    Author     : Tony Partridge - GWE Systems Ltd
+    Description: To allow customisation of CSS Strings where they can never be lost.
+    Purpose of the stylesheet follows.
+*/
+
+.jev_toprow div.previousmonth, .jev_toprow div.nextmonth {
+    background-color: #E16A4A;
+    border: 1px solid #E16A4A;
+}
+
+#jevents_body .nav-items div.active a, .jev_header2 .active a {
+    background-color: #E16A4A;
+    color: #fff;
+}
+
+#jevents_body .nav-items div.active a:hover, .jev_header2 .active a:hover {
+    background-color: #E16A4A;
+    color: black;
+}
+
+#nav-year, #nav-month, #nav-week, #nav-today, #nav-jumpto {
+    border-color: #E16A4A;
+    text-decoration: none;
+}
+
+#nav-year a:hover, #nav-month a:hover, #nav-week a:hover, #nav-today a:hover, #nav-jumpto a:hover {
+    text-decoration: none;
+}
+
+#jevents_body .cal_today a.cal_daylink {
+    background-color: #E16A4A;
+}
+
+#jevents_body .cal_today a.cal_daylink:hover {
+    background-color: white;
+    border-color: #E16A4A;
+    color: #E16A4A;
+}
+
+a.cal_daylink:link:hover {
+    color: #E16A4A;
+}
