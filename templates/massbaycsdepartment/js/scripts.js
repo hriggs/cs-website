@@ -53,6 +53,13 @@ var courses = ["/shopping-cart-experience", "/cs-101", "/icreate"];
 
 var inits = ["/cs-engineering-club", "/technology-internship-program", "/stem-mentor-program"];
 
+var students = ["/student-projects", "/student-competitions", "/alumni"];
+
+var faculty = ["/shamsi-moussavi", "/harold-riggs", "/giuseppe-sena", "/susanne-steiger-escobar"];
+
+var grants = ["/batec", "/dhe", "/icreate-grant", "/mstem", "/stem-starter-academy", "/transform", "/artaic"];
+
+
 /**
  * Highlight main navbar at top when on child pages. 
  */
@@ -75,6 +82,39 @@ function highlightNav() {
         
         // add current and active classes to parent
         parent.className += " current active";
+    } else if (inits.indexOf(window.location.pathname) > -1) {
+    
+    	// get parent item in main navbar
+        var parentList = document.getElementsByClassName("item-108");
+        var parent = parentList[0];
+        
+        // add current and active classes to parent
+        parent.className += " current active";
+    } else if (students.indexOf(window.location.pathname) > -1) {
+    
+    	// get parent item in main navbar
+        var parentList = document.getElementsByClassName("item-109");
+        var parent = parentList[0];
+        
+        // add current and active classes to parent
+        parent.className += " current active";
+    } else if (faculty.indexOf(window.location.pathname) > -1) {
+    
+    	// get parent item in main navbar
+        var parentList = document.getElementsByClassName("item-110");
+        var parent = parentList[0];
+        
+        // add current and active classes to parent
+        parent.className += " current active";
+    } else if (grants.indexOf(window.location.pathname) > -1) {
+    
+    	// get parent item in main navbar
+        var parentList = document.getElementsByClassName("item-111");
+        var parent = parentList[0];
+        
+        // add current and active classes to parent
+        parent.className += " current active";
     }
+
 
 }
