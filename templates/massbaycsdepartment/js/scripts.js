@@ -59,7 +59,6 @@ var faculty = ["/shamsi-moussavi", "/harold-riggs", "/giuseppe-sena", "/susanne-
 
 var grants = ["/batec", "/dhe", "/icreate-grant", "/mstem", "/stem-starter-academy", "/transform", "/artaic"];
 
-
 /**
  * Highlight main navbar at top when on child pages. 
  */
@@ -74,6 +73,9 @@ function highlightNav() {
         
         // add current and active classes to parent
         parent.className += " current active";
+        
+        addBreadcrumb("/degrees-certificates", "Degrees & Certificates");
+        
     } else if (courses.indexOf(window.location.pathname) > -1) {
     
     	// get parent item in main navbar
@@ -82,6 +84,9 @@ function highlightNav() {
         
         // add current and active classes to parent
         parent.className += " current active";
+        
+        addBreadcrumb("/innovative-courses", "Innovative Courses");
+        
     } else if (inits.indexOf(window.location.pathname) > -1) {
     
     	// get parent item in main navbar
@@ -90,6 +95,9 @@ function highlightNav() {
         
         // add current and active classes to parent
         parent.className += " current active";
+        
+        addBreadcrumb("/initiatives", "Initiatives");
+        
     } else if (students.indexOf(window.location.pathname) > -1) {
     
     	// get parent item in main navbar
@@ -98,6 +106,9 @@ function highlightNav() {
         
         // add current and active classes to parent
         parent.className += " current active";
+        
+        addBreadcrumb("/students-and-alumni", "Students & Alumni");
+                
     } else if (faculty.indexOf(window.location.pathname) > -1) {
     
     	// get parent item in main navbar
@@ -106,6 +117,9 @@ function highlightNav() {
         
         // add current and active classes to parent
         parent.className += " current active";
+        
+        addBreadcrumb("/faculty-staff", "Faculty & Staff");
+        
     } else if (grants.indexOf(window.location.pathname) > -1) {
     
     	// get parent item in main navbar
@@ -114,7 +128,63 @@ function highlightNav() {
         
         // add current and active classes to parent
         parent.className += " current active";
+        
+        addBreadcrumb("/grants", "Grants");
     }
+}
 
+/**
+ * Add parent link to breadcrumb.
+ */
+function addBreadcrumb(url, text) {
 
+	// get elements on page with "breadcrumb" class
+    var breadcrumbsList = 	document.getElementsByClassName("breadcrumb");
+    var breadcrumb = breadcrumbsList[0];
+     
+    // create li element with attributes 
+	var li = document.createElement("li");
+    li.setAttribute("itemtype", "http://schema.org/ListItem");
+    li.setAttribute("itemscope", "");
+    li.setAttribute("itemprop", "itemListElement");
+        
+    // create a element with attributes     
+    var a = document.createElement("a");
+    a.setAttribute("class", "pathway");
+    a.setAttribute("href", url);
+    a.setAttribute("itemprop", "item");
+      
+    // create span element with attributes   
+    var span = document.createElement("span");
+    span.setAttribute("itemprop", "name");
+     
+    // create text element
+    var text =  document.createTextNode(text);
+    
+    // append items
+    span.appendChild(text);
+    a.appendChild(span);
+      
+    // create span divider element with attributes    
+    var divider = document.createElement("span");
+    divider.setAttribute("class", "divider")
+     
+    // create img element with attributes    
+    var img = document.createElement("img");
+    img.setAttribute("src", "/media/system/images/arrow.png");
+    
+    divider.appendChild(img);
+     
+    // create meta element with attributes    
+    var meta = document.createElement("meta");
+    meta.setAttribute("content", "1");
+    meta.setAttribute("itemprop", "position");
+    
+    // append items
+    li.appendChild(a);
+    li.appendChild(divider);
+    li.appendChild(meta);
+    
+    // add li to breadcrumb ul
+	breadcrumb.insertBefore(li, breadcrumb.childNodes[2]);
 }
