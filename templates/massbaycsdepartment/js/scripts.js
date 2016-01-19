@@ -43,6 +43,9 @@ jQuery(document).ready(function($){
     
     // highlight navbar
     highlightNav();
+    
+    // list home on homepage breadcrumb
+    addHomeBreadcrumb("http://cs.loc/");
 
 });
 
@@ -131,6 +134,49 @@ function highlightNav() {
         
         addBreadcrumb("/grants", "Grants");
     }
+}
+
+/**
+ *
+ */
+function addHomeBreadcrumb(url) {
+    
+    if (window.location.href == url) {
+    
+    	// get elements on page with "breadcrumb" class
+    	var breadcrumbsList = 	document.getElementsByClassName("breadcrumb");
+    	var breadcrumb = breadcrumbsList[0];
+        
+    	// create li element with attributes 
+		var li = document.createElement("li");
+        li.setAttribute("class", "active");
+   		li.setAttribute("itemtype", "http://schema.org/ListItem");
+    	li.setAttribute("itemscope", "");
+    	li.setAttribute("itemprop", "itemListElement");
+        
+        // create span element with attributes   
+    	var span = document.createElement("span");
+    	span.setAttribute("itemprop", "name");
+        
+        // create text element
+    	var text =  document.createTextNode("Home");
+        
+        // append item to span
+    	span.appendChild(text);
+        
+        // create meta element with attributes    
+    	var meta = document.createElement("meta");
+    	meta.setAttribute("content", "1");
+    	meta.setAttribute("itemprop", "position");
+        
+        // append items to li
+    	li.appendChild(span);
+    	li.appendChild(meta);
+    
+        // add li to breadcrumb ul
+		breadcrumb.insertBefore(li, breadcrumb.childNodes[2]);
+    }
+
 }
 
 /**
